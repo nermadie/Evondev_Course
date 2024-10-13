@@ -1,0 +1,32 @@
+:root {
+    --primary-color: #ffa400;
+}
+* {
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.6rem;
+}
+.title {
+    position: relative;
+    /* Khong su dung margin de thut vao vi before after cung se an theo margin do */
+    padding-left: 2rem;
+    margin: 5rem;
+    font-size: 3rem;
+    font-weight: bold;
+}
+.title::before {
+    content: "";
+    width: 1rem;
+    height: 1rem;
+    border-radius: 1rem;
+    background-color: red;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}

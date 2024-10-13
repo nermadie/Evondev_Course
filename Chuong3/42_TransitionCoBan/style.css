@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.6rem;
+}
+.wrap {
+    width: 20rem;
+    height: 20rem;
+}
+.boxed2 {
+    width: 20rem;
+    height: 20rem;
+    background-color: red;
+    /* display: none; */
+    opacity: 0;
+    visibility: hidden;
+    /* transition: property duration timing-function delay;
+        Reference: https://www.w3schools.com/css/css3_transitions.asp
+    */
+    transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0.5s;
+    transition: all 1s ease-in-out 0.5s;
+}
+.wrap:hover .boxed2 {
+    /* display: block; */
+    /* 2 thuoc tinh nay phai ket hop de hien thi muot */
+    opacity: 1;
+    visibility: visible;
+    background-color: green;
+    color: white;
+}

@@ -1,0 +1,209 @@
+$blue-color: #42a7fe;
+$green-color: #16c090;
+$primary-color: #fc556f;
+$secondary-color: #fd9c84;
+$gradient: linear-gradient(to right, $primary-color, $secondary-color);
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+@mixin maxWidth($value) {
+  @media screen and (max-width: $value) {
+    @content;
+  }
+}
+@mixin textOverflow($clamp: 2) {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+}
+///////////////////////////////////////////
+input,
+select,
+textarea,
+button {
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
+  outline: none;
+}
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+textarea {
+  resize: none;
+}
+button {
+  cursor: pointer;
+}
+input:focus {
+  border: 1px solid $primary-color;
+}
+///////////////////////////////////////////
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+@mixin flexbox(
+  $align: flex-start,
+  $justify: flex-start,
+  $direction: row,
+  $wrap: nowrap
+) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+}
+body {
+  background-color: #f3f3f3;
+  padding: 2rem;
+}
+.post {
+  padding: 2rem;
+  border-radius: 1rem;
+  background-color: white;
+  @include flexbox(stretch, space-between, row, wrap);
+  max-width: 100rem;
+  margin: 0 auto;
+  &__left,
+  &__right {
+    width: calc(50% - 1rem);
+  }
+  &__media {
+    height: 25rem;
+    position: relative;
+    margin-bottom: 3.5rem;
+  }
+  &__image {
+    @include size(100%);
+    object-fit: cover;
+    border-radius: 1rem;
+    overflow: hidden;
+    &--small {
+      @include size(15rem, 10rem);
+      flex-shrink: 0;
+      margin-right: 1.5rem;
+    }
+  }
+  &__category {
+    color: white;
+    font-size: 1.2rem;
+    display: inline-block;
+    padding: 1rem;
+    border-radius: 2rem;
+    background-image: $gradient;
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    z-index: 1;
+  }
+  &__icon {
+    @include size(5rem);
+    @include flexbox(center, center);
+    color: white;
+    background-image: $gradient;
+    border-radius: 5rem;
+    position: absolute;
+    bottom: 0;
+    right: 2rem;
+    transform: translateY(50%);
+    z-index: 1;
+  }
+  &-author {
+    @include flexbox(center);
+    font-size: 1.4rem;
+    color: #999;
+    margin-bottom: 2rem;
+    &__avatar {
+      @include size(4rem);
+      border-radius: 4rem;
+      object-fit: cover;
+      margin-right: 1rem;
+    }
+    &__name {
+      margin-right: 2.5rem;
+      padding-right: 2.5rem;
+      position: relative;
+      &::before {
+        content: "";
+        @include size(5px);
+        border-radius: 1rem;
+        background-color: $primary-color;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+  &__date {
+    color: #999;
+    font-size: 1.4rem;
+  }
+  &__title {
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+    color: #333;
+    &--small {
+      font-size: 1.6rem;
+      margin-bottom: 0;
+    }
+  }
+  &__desc {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: #666;
+  }
+  &__item {
+    @include flexbox(center);
+    &:not(:last-child) {
+      padding-bottom: 1.5rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid #eee;
+    }
+  }
+  &__link {
+    color: inherit;
+  }
+  &__content {
+    width: 100%;
+    flex-grow: 1;
+  }
+}
+@include maxWidth(767px) {
+  .post {
+    &__left,
+    &__right {
+      width: 100%;
+    }
+    &__left {
+      margin-bottom: 2.5rem;
+    }
+    &__image--small {
+      @include size(10rem, 8rem);
+    }
+    &__title {
+      @include textOverflow(2);
+      &--small {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}

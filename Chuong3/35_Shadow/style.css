@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.6rem;
+}
+.shadow {
+    width: 20rem;
+    height: 20rem;
+    background-color: rgb(255, 128, 202);
+    margin: 5rem auto;
+    /* box-shadow: x y blur scale color*/
+    box-shadow: 5px 5px 10px 5px rgba(255, 0, 0, 0.493);
+    /* box-shadow: inset x y blur scale color
+        Do bong ben trong
+    */
+}
+.shadow-text {
+    font-size: 4rem;
+    font-weight: bold;
+    /* text-shadow: x y blur color; */
+    text-shadow: 5px 5px 10px red;
+    /* Khong co inset */
+}

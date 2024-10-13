@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.6rem;
+}
+.boxed {
+    width: 20rem;
+    height: 20rem;
+    background-image: linear-gradient(
+        to right bottom,
+        #00aefd 0%,
+        #6789ab 50%,
+        #ffa400 90%
+    );
+    /*
+        direction: to right, to left, to bottom, to top, to right bottom, to left bottom, to right top, to left top
+        120deg
+
+        color1 a%(default 0%)
+        color2 b%
+        color3 c%
+        ....
+        last color n%(default 100%)
+        VD: color1 va color2 se mix nhau trong khoang a%-b% cua background
+            color2 va color3 se mix nhau trong khoang b%-c% cua background
+    */
+}
+.title {
+    font-weight: bold;
+    font-size: 3rem;
+    display: inline-block;
+    margin: 2rem;
+    color: #00aefd;
+}
+/* @supports not ... */
+@supports (-webkit-background-clip: text) {
+    .title {
+        background-image: linear-gradient(to right bottom, #ffa400, #00aefd);
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+    }
+}

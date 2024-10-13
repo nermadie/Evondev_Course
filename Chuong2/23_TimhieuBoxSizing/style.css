@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+.boxed {
+    width: 10rem;
+    height: 10rem;
+    border: 5px solid black;
+    padding: 1rem;
+    background-color: orange;
+    /* Default: content-box
+            width = width + padding-left + padding-right + border-left + border-right
+                  = 10rem + 1rem + 1rem + 5px + 5px
+                  = 12rem + 10px
+            height = height + padding-top + padding-bottom + border-top + border-bottom
+                   = 10rem + 1rem + 1rem + 5px + 5px
+                   = 12rem + 10px
+    */
+    /* border-box
+            width = width
+                  = 10rem
+            height = height
+                   = 10rem
+    */
+    box-sizing: border-box;
+}

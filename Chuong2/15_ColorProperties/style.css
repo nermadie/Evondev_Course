@@ -1,0 +1,15 @@
+p {
+    /* color: value */
+    /*
+        named: orange, blue, green
+        hexa: #ff0000, #00ff00, #0000ff
+              #ff0000, #00ff00, #0000ff -> #f00, #0f0, #00f
+        rgb: rgb(255, 0, 0), rgb(0, 255, 0), rgb(0, 0, 255)
+        rgba: rgba(255, 0, 0, 0.5), rgba(0, 255, 0, 0.5)
+            alpha: 0.0 -> 1.0 (~ opacity)
+    */
+    color: red;
+    color: #ffa400;
+    color: rgb(0, 0, 0);
+    color: rgba(0, 0, 0, 0.5);
+}

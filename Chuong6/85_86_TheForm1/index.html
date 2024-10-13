@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <!-- Form action dung cho BE -->
+    <form autocomplete="on">
+      <!-- Label -> id -->
+      <!-- Can click to Label to focus input -->
+      <label for="password">ChangePassword</label>
+      <input type="text" required minlength="5" maxlength="10" disabled />
+      <input type="number" min="2" max="10" />
+      <input type="email" readonly />
+      <input type="password" id="password" />
+      <!-- name dung cho JS de lay du lieu -->
+      <input type="phone" value="0775513097" name="phonenum" />
+      <input type="date" />
+      <input type="time" />
+      <!-- checkbox/radio -> name -->
+      <input type="checkbox" name="hobby" id="soccer_hb" />
+      <label for="soccer_hb">Soccer</label>
+      <input type="checkbox" name="hobby" id="volleyball_hb" />
+      <label for="volleyball_hb">Volleyball</label>
+      <input type="checkbox" name="hobby" id="dance_hb" />
+      <label for="dance_hb">Dance</label>
+      <input type="radio" name="gender" id="male_gen" />
+      <label for="male_gen">Male</label>
+      <input type="radio" name="gender" id="female_gen" />
+      <label for="female_gen">Female</label>
+      <input type="radio" name="gender" id="other_gen" />
+      <label for="other_gen">Other</label>
+      <input type="file" />
+      <!-- The button co the co the con -->
+      <button type="submit">
+        <i class="fa fa-user"></i>
+      </button>
+      <!-- Khong the co the con (The tu dong) -->
+      <input type="submit" value="OK" />
+      <input type="button" value="OK" />
+      <button type="reset">Reset</button>
+
+      <textarea></textarea>
+      <select name="select" id="">
+        <option value="a">abc</option>
+        <option value="b">def</option>
+        <option value="c">ghi</option>
+      </select>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.6rem;
+}
+.background {
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(
+            to right bottom,
+            rgba(0, 173, 253, 0.822),
+            rgba(255, 166, 0, 0.767)
+        ),
+        url("https://images.unsplash.com/photo-1682695798522-6e208131916d?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+}

@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.6rem;
+}
+.box {
+    width: 200px;
+    height: 300px;
+    background-color: #ffa400;
+}
+.ellipsis-line3 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.ellipsis-line1 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.set-background-square {
+    background-image: url("https://i.pinimg.com/originals/72/54/5f/72545fd03cecc8bae56a89e822ec70e1.jpg");
+    width: 100vw;
+    height: 100vh;
+    background-position: center right;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background: white
+        url("https://i.pinimg.com/originals/72/54/5f/72545fd03cecc8bae56a89e822ec70e1.jpg")
+        center right / cover no-repeat;
+}
+.set-background-rounded {
+    width: 400px;
+    height: 400px;
+    background: white
+        url("https://i.pinimg.com/originals/72/54/5f/72545fd03cecc8bae56a89e822ec70e1.jpg")
+        center center / cover no-repeat;
+    border-radius: 50%;
+}
+.button {
+    width: 250px;
+    height: 70px;
+    color: white;
+    background-color: #5a1ce9;
+    font-size: 3rem;
+    font-weight: 700;
+    transition: all 0.1s ease-in-out;
+}
+.a {
+    display: inline-block;
+    line-height: 70px;
+    text-align: center;
+}
+.button:hover {
+    background-color: #df74ff;
+    color: black;
+    cursor: pointer;
+}
+.button:active {
+    color: black;
+    background-color: #eeb5ff;
+}
+.bai7-wrapper,
+.bai8-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.btn-rounded-corners {
+    border-radius: 5px;
+}
+.btn-round-corners {
+    border-radius: 70px;
+}

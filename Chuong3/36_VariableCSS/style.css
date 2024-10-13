@@ -1,0 +1,29 @@
+:root {
+    /* global variable */
+    --primary-color: #00aefd;
+    --secondary-color: #ffa400;
+}
+* {
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.6rem;
+}
+.shadow {
+    width: 20rem;
+    height: 20rem;
+    background-color: var(--primary-color);
+    margin: 5rem auto;
+    box-shadow: 5px 5px 10px 5px var(--secondary-color);
+}
+.shadow-text {
+    /* local variable */
+    --secondary-color: purple;
+    font-size: 4rem;
+    font-weight: bold;
+    text-shadow: 5px 5px 10px var(--secondary-color);
+}

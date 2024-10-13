@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.6rem;
+    /* mac dinh 400 */
+    font-weight: 300;
+    font-style: italic;
+}
+.font {
+    /* Khoang cach giua 2 line, default 1 */
+    line-height: 1.5;
+    /* Can le, default left */
+    text-align: left;
+    text-align: center;
+    text-align: right;
+    text-align: justify;
+    /* Khoang cach giua 2 ky tu, default 0 */
+    letter-spacing: 5px;
+    /* Khoang cach giua 2 tu, default 0 */
+    word-spacing: 5px;
+    /* Hien thi dau 3 cham tren 1 hang */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* Hien thi dau 3 cham khi toi hang thu 3 */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.text {
+    /* Khi gap mot tu dai lam tran layout */
+    word-break: break-all;
+    /* Uu tien break word <- recommend */
+    word-break: break-word;
+}

@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.6rem;
+}
+.boxed {
+    width: 20rem;
+    height: 20rem;
+    background-image: linear-gradient(to right bottom, #00aefd, #ffa400);
+    cursor: pointer;
+    /* Van chiem dien tich, co the nhan vao duoc, co the transition*/
+    /* opacity: 0; */
+    /* Van chiem dien tich, khong the nhan vao duoc, co the transition*/
+    /* visibility: hidden; */
+    /* Khong chien dien tich, khong the nhan vao duoc, khong ho tro transition*/
+    /* display: none; */
+}
+.title {
+    font-weight: bold;
+    font-size: 3rem;
+    display: inline-block;
+    margin: 2rem;
+    background-image: linear-gradient(to right bottom, #ffa400, #00aefd);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}

@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.6rem;
+}
+h3,
+h4,
+h5 {
+    font-size: 5rem;
+    font-weight: bold;
+}
+/* Cung cap nhung dung ngay sau */
+h3 + .title {
+    color: green;
+}
+/* Cung cap dung sau, khong nhat thiet phai ngay sau */
+h3 ~ .title2 {
+    color: yellow;
+}
+/*
+    descendant selector (space) -> select all children
+    child selector (>) -> select only their children
+    adjacent sibling selector (+)
+    general sibling selector (~)
+ */

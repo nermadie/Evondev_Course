@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.6rem;
+}
+ul {
+    font-size: 4rem;
+    font-weight: bold;
+}
+/* Order changed => Not work!!! */
+/* li:first-child{
+    color: yellow;
+}
+li:nth-child(2){
+    color: yellow;
+}
+*/
+li:first-of-type {
+    color: blue;
+}
+li:last-of-type {
+    color: red;
+}
+li:nth-of-type(2) {
+    color: green;
+}
+li:nth-last-of-type(2) {
+    color: purple;
+}
+.list2 li span {
+    color: black;
+}
+.list2 li:nth-child(2n + 1) span {
+    color: red;
+}

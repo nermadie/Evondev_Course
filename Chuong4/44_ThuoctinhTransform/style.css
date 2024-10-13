@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.6rem;
+}
+.boxed {
+    width: 5rem;
+    height: 5rem;
+    background-color: red;
+    /* transform: scale scaleX scaleY; */
+    transform: scaleX(2) scaleY(2);
+    transform: scale(2, 2);
+    /* transform: rotate(45deg) rotateX() rotateY() rotateZ();
+                    default rotateZ()*/
+    transform: rotate(45deg);
+    /* transform: translate translateX translateY;  */
+    transform: translateX(10px) translateY(10px);
+    transform: translateX(100%) translateY(100%);
+    /* transform: skew skewX skewY;  */
+    transform: skewX(-30deg) skewY(30deg);
+    /* transform: scale(2) rotate(45deg) translate(100%, 50%); */
+}

@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.6rem;
+}
+p {
+    color: white;
+    position: relative;
+    /* Chi hoat dong voi position relative/absolute */
+    z-index: 1;
+}
+.boxed {
+    width: 5rem;
+    height: 5rem;
+    background-color: red;
+    position: absolute;
+    /* center center */
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    /* left center */
+    /* top: 50%;
+    transform: translateY(-50%); */
+    /* top center */
+    /* left: 50%;
+    transform: translateX(-50%); */
+
+    /* Overlay all */
+    /* Cach 1 */
+    /* top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; */
+
+    /* Cach 2 */
+    /* width: auto;
+    height: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; */
+
+    /* Overlay theo chieu ngang */
+    /* Cach 1 */
+    /* width: 100%;
+    left: 0; */
+    /* Cach 2 */
+    /* width: auto;
+    left: 0;
+    right: 0; */
+
+    /* Overlay theo chieu doc */
+    /* Cach 1 */
+    /* height: 100%;
+    top: 0; */
+    /* Cach 2 */
+    height: auto;
+    top: 0;
+    bottom: 0;
+
+    z-index: 2;
+}
+.wrap {
+    width: 100%;
+    height: 50rem;
+    background-color: black;
+    position: relative;
+}

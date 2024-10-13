@@ -1,0 +1,22 @@
+/* Font-size: 100% = 16px */
+/* 1em = 1rem = 16px */
+html {
+    /* 1rem = 10px */
+    font-size: 62.5% !important;
+}
+.em {
+    width: 10em;
+    height: 10em;
+    background-color: #ffa400;
+    font-size: 32px;
+    /* 1em = 32px */
+    /* La don vi se phu thuoc vao thuoc tinh font-size cua chinh no hoac phan tu chua no */
+}
+.rem {
+    width: 10rem;
+    height: 10rem;
+    background-color: #ff7870;
+    font-size: 32px;
+    /* La don vi se phu thuoc vao thuoc tinh font-size cua the html */
+}
+/* 100% = 16px */

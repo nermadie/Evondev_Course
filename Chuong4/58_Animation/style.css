@@ -1,0 +1,63 @@
+:root {
+    --primary-color: #ffa400;
+}
+* {
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.6rem;
+}
+.boxed {
+    width: 5rem;
+    height: 5rem;
+    background-color: red;
+    animation-name: move;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-delay: 1s;
+    /*
+        COUNT:  *Normal
+                    1: from -> to
+                    2: from -> to, from -> to
+                    3: from -> to, from -> to, from -> to
+                *Alternate
+                    1: from -> to
+                    2: from -> to -> from
+                    3: from -> to -> from -> to
+                *Reverse
+                    1: to -> from
+                    2: to -> from, to -> from
+                    3: to -> from, to -> from, to -> from
+                *Alternate-Reverse
+                    1: to -> from
+                    2: to -> from -> to
+                    3: to -> from -> to -> from
+    */
+    animation-iteration-count: 3;
+    animation-direction: alternate-reverse;
+    /*
+        Fill Mode:
+            - none: default style(delay) -> from -> to ->... -> default style
+            - backwards: from style(delay) -> from -> to ->... -> default style
+            - forwards: default style(delay) -> from -> to ->... -> to style
+            - both: from style(delay) -> from -> to ->... -> to style
+    */
+    animation-fill-mode: backwards;
+
+    animation: move 1s reverse 1 ease-in backwards 3s;
+}
+@keyframes move {
+    /* from -> to */
+    from {
+        transform: translateX(0);
+        background-color: orange;
+    }
+    to {
+        transform: translateX(20rem);
+        background-color: pink;
+    }
+}

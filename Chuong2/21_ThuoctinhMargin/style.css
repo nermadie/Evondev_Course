@@ -1,0 +1,32 @@
+html {
+    font-size: 62.5%;
+}
+.margin {
+    width: 14rem;
+    height: 14rem;
+    background-color: red;
+    /* margin */
+    margin: 10px 10px 10px 10px;
+    margin-top: 20px;
+    margin-right: 30px;
+    margin-left: 40px;
+    margin-bottom: 50px;
+    /* 1 gia tri -> top = right = bottom = left = 20px*/
+    margin: 20px;
+    /* 2 gia tri -> top = bottom = 20px & right = left = 30px */
+    margin: 20px 30px;
+    /* 3 gia tri -> top = 10px & right = left = 20px & bottom = 30px */
+    margin: 10px 20px 30px;
+    /* 4 gia tri -> top = 10px & right = 20px & bottom = 30px & left = 40px */
+    margin: 10px 20px 30px 40px;
+    /* Center: chi co tac dung voi the Block */
+    margin: 0 auto;
+    /* Right */
+    margin-left: auto;
+    /* Left */
+    margin-right: auto;
+}
+.margin2 {
+    /* margin collapse */
+    margin-top: 50px;
+}

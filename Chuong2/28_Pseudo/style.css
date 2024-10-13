@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.6rem;
+    /* mac dinh 400 */
+    font-weight: 300;
+    font-style: italic;
+}
+img {
+    display: block;
+    max-width: 100%;
+}
+.image-wrap {
+    /* Chi work voi the inline, inline-block ben trong */
+    text-align: center;
+}
+.image {
+    /*
+        img la the block
+    */
+    display: inline-block;
+    width: 20rem;
+    height: 20rem;
+    /* Chi work voi block */
+    /* margin: 0 auto; */
+    /* Khi anh bi meo do khac width, height, default fill */
+    object-fit: cover;
+    /* Khi cover, thi lay vi tri nao, Default: center */
+    object-position: center;
+    object-position: top;
+}
+.pseudo {
+    color: black;
+    font-size: 5rem;
+}
+.pseudo:visited {
+    color: purple;
+}
+.pseudo:hover {
+    color: orange;
+}
+.pseudo:active {
+    color: red;
+}

@@ -1,0 +1,106 @@
+$blue-color: #42a7fe;
+@mixin size($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-size: 1.6rem;
+    font-family: "Poppins", sans-serif;
+}
+a {
+    text-decoration: none;
+}
+img {
+    display: block;
+    max-width: 100%;
+}
+.dropdown {
+    width: 40rem;
+    margin: 2rem auto 0;
+    position: relative;
+    &__select {
+        padding: 2rem 2.5rem 2rem 4rem;
+        background-color: $blue-color;
+        color: white;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+    &__text {
+        margin-left: 3.5rem;
+    }
+    &__caret {
+        margin-left: auto;
+    }
+    &__item {
+        padding: 2rem 2.5rem 2rem 4rem;
+        display: flex;
+        align-items: center;
+        color: #b3bbce;
+        transition: color 0.2s ease-in-out;
+        cursor: pointer;
+        position: relative;
+        &:not(:last-child) {
+            border-bottom: 1px solid #ddd;
+        }
+        &:hover {
+            color: #74809d;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            width: 3px;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            transition: background-color 0.2s ease-in-out;
+        }
+        &:hover::before {
+            background-color: $blue-color;
+        }
+    }
+    &__list {
+        border-radius: 4px;
+        box-shadow: 0 0 1rem 0 rgba(black, 0.1);
+        margin-top: 3rem;
+        position: absolute;
+        width: 100%;
+        top: 100%;
+        left: 0;
+        background-color: white;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.2s ease-in-out;
+        &::before {
+            content: "";
+            @include size(2rem);
+            // border-left: 1rem solid transparent;
+            // border-right: 1rem solid transparent;
+            // border-bottom: 1rem solid white;
+            background-color: white;
+            position: absolute;
+            top: 0;
+            right: 3rem;
+            transform: rotate(45deg) translateY(-50%);
+            box-shadow: 0 0 1rem 0 rgba(black, 0.1);
+            z-index: -1;
+        }
+        &::after {
+            content: "";
+            @include size(100%, 3rem);
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translateY(-100%);
+        }
+    }
+    &:hover {
+        .dropdown__list {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}

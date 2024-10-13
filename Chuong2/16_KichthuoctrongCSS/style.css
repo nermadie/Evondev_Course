@@ -1,0 +1,10 @@
+.background {
+    background-color: #2979ff;
+    /* width: 100px; */
+    /* height: 100px;
+    overflow-y: scroll; */
+    min-height: 100px;
+    max-height: 200px;
+    min-width: 100px;
+    max-width: 50%;
+}

@@ -1,0 +1,30 @@
+/* Font-size: 100% = 16px */
+/* 1em = 1rem = 16px */
+.em {
+    width: 10em;
+    height: 10em;
+    background-color: #ffa400;
+    font-size: 32px;
+}
+.rem {
+    width: 10rem;
+    height: 10rem;
+    background-color: #ff7870;
+    font-size: 32px;
+    border: 2px solid black;
+    /* border: border-width border-style border-color */
+    border-width: 2px;
+    border-style: solid;
+    border-style: dashed;
+    border-style: dotted;
+    border-color: black;
+    border-top: 5px solid red;
+    border-right: 10px solid green;
+    /* border-radius */
+    border-radius: 10px 20px 30px 40px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 40px;
+    border-radius: 50%;
+}

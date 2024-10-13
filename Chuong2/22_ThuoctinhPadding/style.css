@@ -1,0 +1,25 @@
+html {
+    font-size: 62.5%;
+}
+.padding {
+    width: 10rem;
+    height: 10rem;
+    background-color: #2979ff;
+    /* margin: 0 auto; */
+    overflow: hidden;
+    /* 1 gia tri -> top = right = bottom = left = 20px*/
+    padding: 20px;
+    /* 2 gia tri -> top = bottom = 20px & right = left = 30px */
+    padding: 20px 30px;
+    /* 3 gia tri -> top = 10px & right = left = 20px & bottom = 30px */
+    padding: 10px 20px 30px;
+    /* 4 gia tri -> top = 10px & right = 20px & bottom = 30px & left = 40px */
+    padding: 10px 20px 30px 40px;
+}
+.margin2 {
+    background-color: red;
+    /* margin co the de so am */
+    margin: -50px 20px;
+    width: 14rem;
+    height: 14rem;
+}

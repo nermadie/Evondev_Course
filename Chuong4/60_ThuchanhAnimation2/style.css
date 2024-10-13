@@ -1,0 +1,40 @@
+:root {
+    --primary-color: #ffa400;
+}
+* {
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.6rem;
+}
+.circles {
+    text-align: center;
+    margin: 5rem;
+    animation: loading 0.5s infinite linear;
+}
+@keyframes loading {
+    50% {
+        transform: rotate(200deg);
+    }
+    75% {
+        transform: rotate(160deg);
+    }
+    100% {
+        transform: rotate(180deg);
+    }
+}
+.circle-item {
+    width: 3rem;
+    height: 3rem;
+    border: 3px solid violet;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 0.5rem;
+}
+.circle-item:nth-child(1) {
+    /* border-color: cyan; */
+}

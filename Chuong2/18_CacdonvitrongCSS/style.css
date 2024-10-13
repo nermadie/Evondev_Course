@@ -1,0 +1,12 @@
+.wrap {
+    width: 400px;
+}
+.background2 {
+    /* viewport width, viewport height */
+    /* width: 100%; */
+    width: 100vw;
+    height: 100vh;
+    background: red
+        url("https://images.unsplash.com/photo-1682686581030-7fa4ea2b96c3?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+        center center / cover no-repeat;
+}

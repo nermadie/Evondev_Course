@@ -1,0 +1,40 @@
+:root {
+    --primary-color: #ffa400;
+}
+* {
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.6rem;
+}
+/*
+    BORDER:
+        - Border sẽ cố gắng trải ra 2 bên bên trong block tuỳ thuộc vào chiều dài và chiều rộng của block
+            VD: + border-bottom sẽ phụ thuộc vào width của block và border_height để hiển thị
+                + border-left sẽ phụ thuộc vào height của block và border_height để hiển thị
+
+        - Khi 2 border giao nhau thì 2 border sẽ được chia đều từ điểm giao giữa 2 border_height cho tới đỉnh gần nhất của block
+
+        - Nếu đã có một border có border_height vượt width hoặc height của block thì đối với border khác sẽ lấy theo border_height của border đó ứng với width/height đã bị vượt
+            VD: + border-bottom có border_height vượt width của block thì border-left sẽ lấy border_height của border-bottom ứng với width của block
+                + border-left có border_height vượt height của block thì border-top sẽ lấy border_height của border-left ứng với height của block
+*/
+.boxed {
+    /* width: 20rem;
+    height: 20rem; */
+    display: inline-block;
+    margin: 2rem auto;
+    /* border-left: 10px solid red;
+    border-right: 10px solid blue;
+    border-top: 10px solid orange;
+    border-bottom: 10px solid purple; */
+
+    /* Tam giac below */
+    border-left: 10rem solid transparent;
+    border-right: 10rem solid transparent;
+    border-bottom: 10rem solid orange;
+}

@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.6rem;
+}
+/*
+    !important >>> id > class > tag
+    watch Selector Specify: https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity
+*/
+#title {
+    color: red;
+}
+.title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: orange;
+}
+h2 {
+    color: blue !important;
+}

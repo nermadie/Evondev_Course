@@ -1,0 +1,57 @@
+:root {
+    --primary-color: #ffa400;
+}
+* {
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.6rem;
+}
+.list {
+    background-color: rgb(211, 195, 255);
+    margin-top: 5rem;
+    height: 50rem;
+    display: flex;
+    flex-direction: column;
+}
+.list__item {
+    padding: 1rem;
+    background-color: orange;
+    margin: 5px;
+    /* Order nhỏ hơn sẽ ở trước */
+    order: 0;
+}
+.list__item:nth-child(2) {
+    order: 1;
+}
+.list__item:nth-child(3) {
+    order: 3;
+}
+.list__item:last-child {
+    order: 2;
+}
+
+.layout {
+    display: flex;
+}
+.icon {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 1rem;
+    background-color: red;
+    color: white;
+    /* Can giua */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.layout p {
+    --value: 10rem;
+    /* calc() */
+    width: calc(100% - var(--value));
+    margin-bottom: calc(-1 * 100px);
+}
