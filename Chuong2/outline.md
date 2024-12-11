@@ -1,0 +1,79 @@
+# Chuong 2: Biến và các kiểu dữ liệu thường gặp
+
+- Giới thiệu
+- Javascript là gì? 2 cách sử dụng JS vào HTML cơ bản
+  - Sử dụng thẻ script:src
+  - Sử dụng inline script
+- console.log dùng để làm gì
+  - Debug
+- Biến (variable)
+  - Lưu giá trị, sử dụng đi sử dụng lại
+  - camelCase
+- Khai báo biến(declare)
+  - const: không thay đổi giá trị
+  - let: có thể thay đổi giá trị
+  - var: cũng có thể thay đổi giá trị
+    - Chú ý:
+      - var có global scope trong khi let và const có block scope.
+      - Các biến var có thể update và khai báo lại trong scope của nó; let có thể update nhưng không khai báo lại được; Các biến const không thể update cũng như không thể khai báo lại.
+      - Cả ba cách khai báo đều sở hữu cơ chế hoisting. Nhưng các biến var được khởi tạo với giá trị undefined, let và const không như vậy, chúng không được khởi tạo.
+      - var và let có thể khai báo mà không cần khởi tạo, const phải được khởi tạo trong quá trình khai báo.
+      - let > var trong block scope -> ReferenceError nếu được gọi trước khi let được khai báo.
+- Hoisting là gì?
+  - Hoisting là cơ chế mà JavaScript đưa phần khai báo lên trên cùng của phạm vi của nó trước khi thực thi.
+  - Chú ý: Chỉ có phần khai báo được đưa lên trên cùng, còn phần gán giá trị không được đưa lên. Và chỉ có var sẽ trả về giá trị undefined, let và const sẽ trả về ReferenceError.
+- Các kiểu dữ liệu
+  - Number
+  - String
+  - Boolean
+  - Null
+  - Undefined
+  - Object
+  - Array
+  - Function
+  - Symbol
+- String:
+  - "" `` ''
+  - `` and $ to add variables in to String
+- Phương thức trong string
+  - .length
+  - .split()
+  - .toLowerCase()
+  - .toUpperCase()
+  - .startsWith() -> boolean
+  - .endsWith() -> boolean
+  - .includes() -> boolean
+  - .indexOf()
+  - .lastIndexOf()
+  - .replace("old", "new") -> new string
+  - .repeat(time)
+  - .slice(start, end-1)
+  - .trim() -> remove space left right
+  - .trimStart() -> remove space left
+  - .trimEnd() -> remove space right
+  - .chatAt(index)
+  - .substring(start, end-1) -> có thể đổi đảo chỗ start, end nếu start > end nhưng không hỗ trợ số âm
+  - .substr(start, length)
+- Number:
+  - parseInt()
+  - parseFloat()
+  - Math.abs()
+  - Math.floor()
+  - Math.ceil()
+  - Math.round()
+  - Math.random() -> 0 -> 1
+    - Math.floor(Math.random() \* (max - min + 1)) + min
+  - Math.pow()
+  - Math.sqrt()
+  - Math.min()
+  - Math.max()
+  - Number.isInteger(number)
+  - float.toFixed(num_of_decimal)
+  - Number.isNaN() -> check if a value is NaN
+  - isNaN() -> Number.isNaN(Number(value))
+- Kiểu dữ liệu khác
+  - undefined
+    - đã khai báo nhưng chưa gán giá trị
+    - == với null nhưng null là do dev gán nên === thì sẽ là false
+- Falsy value: false, 0, "", null, undefined, NaN
+- Truthy value: còn lại

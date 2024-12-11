@@ -1,0 +1,53 @@
+# Chuong 5: Các hàm về thời gian
+
+- Date object
+  - new Date(): Lấy thời gian hiện tại
+- Timestamp
+  - Epoch time: Số giây kể từ 1/1/1970
+  - Timestamp: Số mili giây kể từ 1/1/1970
+  - Get timestamp: getTime()
+- Tạo ra một ngày mới:
+  - new Date() -> Lấy thời gian hiện tại, tự động thay đổi
+  - Khởi tạo thời gian cố định:
+    - new Date(timestamp) -> new Date(1733880503568)
+    - new Date(dateString)
+      - -> new Date('2021-08-08')
+      - -> new Date('2021-08-08T09:00:00')
+      - -> new Date('2021-08-08T09:00:00Z')
+      - -> new Date('Thu Jan 01 1970 08:00:00 GMT+0800 (Indochina Time)')
+    - new Date(year, month, day, hours, minutes, seconds, milliseconds)
+      - -> new Date(2021, 7, 8, 9, 0, 0, 0) // Tháng bắt đầu từ 0
+- Các hàm lấy thông tin thời gian:
+  - getFullYear()
+  - getMonth()
+  - getDate()
+  - getDay()
+  - getHours()
+  - getMinutes()
+  - getSeconds()
+  - getMilliseconds()
+  - getTime()
+- Các hàm set thông tin thời gian:
+  - setFullYear()
+  - setMonth()
+  - setDate()
+  - setHours()
+  - setMinutes()
+  - setSeconds()
+  - setMilliseconds()
+  - setTime()
+- Các hàm UTC:
+  - Thêm UTC sau get, set: getUTCFullYear(), setUTCFullYear()
+  - dùng để lấy thông tin thời gian theo múi giờ UTC, không phụ thuộc vào múi giờ của máy
+- Các hàm thông dụng khác:
+  - <Date>.toDateString()
+  - <Date>.toTimeString()
+  - <Date>.toLocaleDateString()
+  - <Date>.toLocaleDateString("vi-VI")
+  - <Date>.toISOString()
+- setTimeout, setInterval
+  - setTimeout(function, milliseconds): Chạy function sau một khoảng thời gian
+  - setInterval(function, milliseconds): Chạy function sau mỗi khoảng thời gian
+  - clearTimeout(timeout): Dừng setTimeout
+  - clearInterval(interval): Dừng setInterval
+  - có thể clearInterval, clearTimeout bên trong function được truyền vào sử dụng tính chất closure và lexical scope
