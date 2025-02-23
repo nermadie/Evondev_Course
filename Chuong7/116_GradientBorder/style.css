@@ -1,0 +1,64 @@
+input,
+select,
+textarea,
+button {
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
+  outline: none;
+  box-sizing: border-box;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+textarea {
+  resize: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  background-color: #f3f3f3;
+  padding: 2rem;
+}
+
+body {
+  background-color: #131933;
+}
+
+.boxed {
+  width: 10rem;
+  height: 4rem;
+  border-radius: 10rem;
+  background-image: linear-gradient(to right bottom, #fa4c53, #fd9c84);
+  padding: 0.5rem;
+}
+.boxed-child {
+  width: 100%;
+  height: 100%;
+  background-color: #131933;
+  border-radius: inherit;
+}

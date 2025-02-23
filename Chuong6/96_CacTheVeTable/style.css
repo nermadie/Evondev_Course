@@ -1,0 +1,99 @@
+input,
+select,
+textarea,
+button {
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
+  outline: none;
+  box-sizing: border-box;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+textarea {
+  resize: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  background-color: #f3f3f3;
+  padding: 2rem;
+}
+
+table {
+  width: 100%;
+}
+table th,
+table td {
+  color: #8c94a7;
+  text-align: center;
+  font-size: 1.4rem;
+  padding: 2rem;
+}
+table th {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+table thead tr {
+  border-bottom: 1px solid #ccc;
+}
+table .desc {
+  white-space: nowrap;
+  max-width: 15rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+table .status {
+  display: inline-block;
+  padding: 1rem 3rem;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 2rem;
+}
+table .status--active {
+  color: green;
+  background-color: rgba(0, 128, 0, 0.3);
+}
+table .action {
+  display: flex;
+}
+table .action-icon {
+  cursor: pointer;
+  margin: 0 0.5rem;
+}
+
+@media screen and (max-width: 1279px) {
+  .table {
+    width: 100%;
+    overflow-x: auto;
+  }
+  .table::-webkit-scrollbar {
+    display: none;
+  }
+}

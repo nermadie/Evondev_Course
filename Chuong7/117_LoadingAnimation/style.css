@@ -1,0 +1,83 @@
+input,
+select,
+textarea,
+button {
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
+  outline: none;
+  box-sizing: border-box;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+textarea {
+  resize: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  background-color: #f3f3f3;
+  padding: 2rem;
+}
+
+body {
+  background-color: #131933;
+}
+
+.loading {
+  width: 7rem;
+  height: 7rem;
+  position: relative;
+}
+.loading div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(calc(var(--value) * 45deg));
+}
+.loading div::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  border: 4px solid #00aefd;
+  border-radius: 8px;
+  filter: hue-rotate(calc(var(--value) * 45deg));
+  animation: loading 1s infinite;
+  animation-delay: calc(var(--value) * 0.125s);
+}
+
+@keyframes loading {
+  to {
+    transform: scale(0);
+  }
+}

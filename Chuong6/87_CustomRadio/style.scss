@@ -250,10 +250,37 @@ body {
 
 .radio {
   margin: 5rem;
+  &__input {
+    display: none;
+    &:checked + .radio__label:before {
+      background-color: #fc556f;
+      box-shadow: 0 0 0 6px white, 0 0 0 8px #fc556f;
+    }
+  }
+  &__label {
+    position: relative;
+    padding-left: 5rem;
+    cursor: pointer;
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      @include size(2.5rem);
+      border-radius: 50%;
+      background-color: #eff1f5;
+      box-shadow: 0 0 0 6px white, 0 0 0 8px #b7c1cb;
+      transition: all 0.25s linear;
+    }
+  }
   &-demo {
-    @include size(3rem);
-    border-radius: 3rem;
+    @include size(2.5rem);
+    border-radius: 50%;
     background-color: #eff1f5;
-    border: 2px solid #b7c1cb;
+    background-color: #fc556f;
+    // border: 2px solid #b7c1cb;
+    box-shadow: 0 0 0 6px white, 0 0 0 8px #b7c1cb;
+    box-shadow: 0 0 0 6px white, 0 0 0 8px #fc556f;
   }
 }

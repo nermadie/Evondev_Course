@@ -1,0 +1,107 @@
+$blue-color: #42a7fe;
+$green-color: #16c090;
+$primary-color: #fa4c53;
+$secondary-color: #fd9c84;
+$gradient: linear-gradient(to right, $primary-color, $secondary-color);
+$text-color: #291667;
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+@mixin maxWidth($value) {
+  @media screen and (max-width: $value) {
+    @content;
+  }
+}
+@mixin textOverflow($clamp: 2) {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+}
+///////////////////////////////////////////
+input,
+select,
+textarea,
+button {
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
+  outline: none;
+  box-sizing: border-box;
+}
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+textarea {
+  resize: none;
+}
+button {
+  cursor: pointer;
+}
+///////////////////////////////////////////
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+@mixin flexbox(
+  $align: flex-start,
+  $justify: flex-start,
+  $direction: row,
+  $wrap: nowrap
+) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+}
+body {
+  background-color: #f3f3f3;
+  padding: 2rem;
+}
+
+//////////////////////////////////////////
+// Custom GradientBorder
+body {
+  background-color: #131933;
+}
+.boxed {
+  @include size(10rem, 4rem);
+  // Cach 1: border-image -> ko co border-radius
+  // border: 10px solid orange;
+  // border-image-source: linear-gradient(
+  //   to right bottom,
+  //   $primary-color,
+  //   $secondary-color
+  // );
+  // border-image-slice: 1;
+  border-radius: 10rem;
+  // Cach 2: boxshadow
+  // box-shadow: -2px -2px 0 2px $primary-color, 0 0 0 4px $secondary-color;
+  // Cach 3: -> child de len tren
+  background-image: linear-gradient(
+    to right bottom,
+    $primary-color,
+    $secondary-color
+  );
+  padding: 0.5rem;
+  &-child {
+    width: 100%;
+    height: 100%;
+    background-color: #131933;
+    border-radius: inherit;
+  }
+}

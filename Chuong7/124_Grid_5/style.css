@@ -1,0 +1,74 @@
+input,
+select,
+textarea,
+button {
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
+  outline: none;
+  box-sizing: border-box;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+textarea {
+  resize: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  background-color: #f3f3f3;
+  padding: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-areas: "i1 i1 i2 i3" "i1 i1 i6 i6" "i4 i5 i6 i6";
+  gap: 2rem;
+}
+.grid-item img {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+.grid-item:first-child {
+  grid-area: i1;
+}
+.grid-item:nth-child(2) {
+  grid-area: i2;
+}
+.grid-item:nth-child(3) {
+  grid-area: i3;
+}
+.grid-item:nth-child(4) {
+  grid-area: i4;
+}
+.grid-item:nth-child(5) {
+  grid-area: i5;
+}
+.grid-item:last-child {
+  grid-area: i6;
+}

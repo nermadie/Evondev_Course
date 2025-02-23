@@ -1,0 +1,16 @@
+button, input, textarea thường có kiểu css riêng nên xem xét css lại font, borderbox
+
+Vertical align: center giống với
+
+
+Link luyện css:
+  UI:
+  - CollectUI: https://collectui.com/challenges
+  - Dribble: https://dribbble.com/
+  PSD:
+  - freebiesbug: https://freebiesbug.com/
+  - symu.co: https://symu.co/freebies/
+
+Tạo var trong style="--value: $" để làm animation tiện hơn rồi dùng calc tính toán thời gian cũng như góc rotate
+
+% trong padding được tính theo chiều rộng của phần tử cha chứ không phải bottom và top được tính theo chiều cao

@@ -1,0 +1,89 @@
+input,
+select,
+textarea,
+button {
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
+  outline: none;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+textarea {
+  resize: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+input:focus {
+  border: 1px solid #fc556f;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  background-color: #f3f3f3;
+  padding: 2rem;
+}
+
+.checkbox2 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 1rem;
+}
+.checkbox2__input {
+  display: none;
+}
+.checkbox2__input:checked + .checkbox2__label {
+  background-color: #7f6cfa;
+}
+.checkbox2__input:checked + .checkbox2__label .checkbox2__spin {
+  transform: translateX(6rem);
+}
+.checkbox2__label {
+  display: inline-block;
+  width: 10rem;
+  height: 5rem;
+  background-color: #ccc;
+  border-radius: 5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding: 0 5px;
+  transition: all ease 0.3s;
+}
+.checkbox2__spin {
+  width: 4rem;
+  height: 4rem;
+  background-color: white;
+  border-radius: 4rem;
+  transition: all ease 0.3s;
+}

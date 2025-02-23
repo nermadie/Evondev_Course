@@ -1,0 +1,96 @@
+$blue-color: #42a7fe;
+$green-color: #16c090;
+$primary-color: #fa4c53;
+$secondary-color: #fd9c84;
+$gradient: linear-gradient(to right, $primary-color, $secondary-color);
+$text-color: #291667;
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+@mixin maxWidth($value) {
+  @media screen and (max-width: $value) {
+    @content;
+  }
+}
+@mixin textOverflow($clamp: 2) {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+}
+///////////////////////////////////////////
+input,
+select,
+textarea,
+button {
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
+  outline: none;
+  box-sizing: border-box;
+}
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+textarea {
+  resize: none;
+}
+button {
+  cursor: pointer;
+}
+///////////////////////////////////////////
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+@mixin flexbox(
+  $align: flex-start,
+  $justify: flex-start,
+  $direction: row,
+  $wrap: nowrap
+) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+}
+body {
+  background-color: #f3f3f3;
+  padding: 2rem;
+}
+
+//////////////////////////////////////////
+// Grid
+.grid {
+  display: grid;
+  grid-template-columns: 100px 100px 100px 100px 100px 100px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(6, 1fr);
+  column-gap: 1rem;
+}
+// Grid gap, auto-fill, auto-fit, minmax
+.grid {
+  // gap: column-gap row-gap
+  column-gap: 1rem;
+  row-gap: 3rem;
+  gap: 1rem 3rem;
+  // minmax(min, max) -> xét xem max > min không, nếu True thì trả về max và nếu False thì trả về min
+  // auto-fill -> Tạo ra hàng có số cột tối đa bằng giá trị max tối thiểu của minmax
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  // auto-fit -> Tạo ra hàng có số cột tối đa bằng giá trị max tối đa của minmax
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}

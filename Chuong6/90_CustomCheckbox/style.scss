@@ -1,0 +1,108 @@
+$blue-color: #42a7fe;
+$green-color: #16c090;
+$primary-color: #fc556f;
+$secondary-color: #fd9c84;
+$gradient: linear-gradient(to right, $primary-color, $secondary-color);
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+@mixin maxWidth($value) {
+  @media screen and (max-width: $value) {
+    @content;
+  }
+}
+@mixin textOverflow($clamp: 2) {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+}
+///////////////////////////////////////////
+input,
+select,
+textarea,
+button {
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
+  outline: none;
+}
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+textarea {
+  resize: none;
+}
+button {
+  cursor: pointer;
+}
+input:focus {
+  border: 1px solid $primary-color;
+}
+///////////////////////////////////////////
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+@mixin flexbox(
+  $align: flex-start,
+  $justify: flex-start,
+  $direction: row,
+  $wrap: nowrap
+) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+}
+body {
+  background-color: #f3f3f3;
+  padding: 2rem;
+}
+
+//////////////////////////////////////////
+// Custom Input File
+.checkbox2 {
+  @include flexbox($align: center, $justify: flex-start);
+  gap: 1rem;
+  &__input {
+    display: none;
+    &:checked + .checkbox2__label {
+      background-color: #7f6cfa;
+      .checkbox2__spin {
+        transform: translateX(6rem);
+      }
+    }
+  }
+  &__label {
+    display: inline-block;
+    @include size(10rem, 5rem);
+    background-color: #ccc;
+    // 7F6CFA
+    border-radius: 5rem;
+    cursor: pointer;
+    @include flexbox($align: center, $justify: flex-start);
+    padding: 0 5px;
+    transition: all ease 0.3s;
+  }
+  &__spin {
+    @include size(4rem);
+    background-color: white;
+    border-radius: 4rem;
+    transition: all ease 0.3s;
+  }
+}
